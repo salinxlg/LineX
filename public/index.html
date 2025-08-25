@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LineX PlayGround</title>
+    <link rel="shortcut icon" href="/assx/img/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/assx/com.css/com.config.css">
+
+    <script>
+
+        if(typeof apx === 'undefined' || apx.mode != 'com.dex.platform' || apx.vendor != 'Dexly LLC'){window.location.href = '/error/' }
+
+    </script>
+
+</head>
+<body data-context="links">
+
+    <div class="ContextMenu">
+
+        <menu class="CategoriesMenu" style="display: none;">
+
+            <options>
+                <i class="fi fi-br-plus applyuicolor-fill"></i>
+                <p>Crear Nueva</p>
+                <ref>Ctrl+Shift+N</ref>
+            </options>
+
+            <separator></separator>
+
+            <options>
+                <i class="fi fi-rs-pencil applyuicolor-fill"></i>
+                <p>Editar Categoría</p>
+            </options>
+
+            <options>
+                <i class="fi fi-rr-trash applyuicolor-fill"></i>
+                <p>Eliminar Categoría</p>
+                <ref>Ctrl+Supr</ref>
+            </options>
+
+            <separator></separator>	
+
+            <options>
+                <i class="fi fi-rr-thumbtack applyuicolor-fill"></i>
+                <p>Fijar en otra Posición</p>
+            </options>
+
+            <separator></separator>
+
+            <options>
+                <i class="fi fi-rr-box applyuicolor-fill"></i>
+                <p>Agregar a esta categoría</p>
+            </options>
+
+        </menu>
+
+        <menu class="IndexMenu" style="display: none;">
+
+            <options>
+                <i class="fi fi-rr-bolt applyuicolor-fill"></i>
+                <p>Información sobre LineX</p>
+            </options>
+
+            <options>
+                <i class="fi fi-rr-alien applyuicolor-fill"></i>
+                <p>Información del desarrollador</p>
+            </options>
+
+            <options>
+                <i class="fi fi-rr-user applyuicolor-fill"></i>
+                <p>Información de tu cuenta</p>
+            </options>
+
+            <options>
+                <i class="fi fi-rr-exit applyuicolor-fill"></i>
+                <p>Cerrar Sesión</p>
+                <ref>Shift+Alt+L</ref>
+            </options>
+
+            <options>
+                <i class="fi fi-rr-lock applyuicolor-fill"></i>
+                <p>Bloquear Interfaz</p>
+                <ref>Shift+L</ref>
+            </options>
+
+            <separator></separator>
+
+            <options>
+                <i class="fi fi-rr-settings applyuicolor-fill"></i>
+                <p>Configuración</p>
+                <ref>Shift+S</ref>
+            </options>
+
+            <separator></separator>
+
+            <options>
+                <i class="fi fi-rr-toggle-off applyuicolor-fill"></i>
+                <p>Cerrar LineX</p>
+                <ref>Alt+F4</ref>
+            </options>
+
+            <options>
+                <i class="fi fi-rr-rotate-right applyuicolor-fill"></i>
+                <p>Reiniciar</p>
+                <ref>Shift+R</ref>
+            </options>
+
+        </menu>
+
+        <menu class="ProductsMenu" style="display: none;">
+
+            <options>
+                <i class="fi fi-rr-box-open applyuicolor-fill"></i>
+                <p>Mover de Categoría</p>
+            </options>
+
+            <options>
+                <i class="fi fi-rr-pencil applyuicolor-fill"></i>
+                <p>Editar Producto</p>
+            </options>
+            
+            <options>
+                <i class="fi fi-rr-boxes applyuicolor-fill"></i>
+                <p>Ver Inventario</p>
+            </options>
+
+            <separator></separator>
+
+            <options>
+                <i class="fi fi-rr-order-history applyuicolor-fill"></i>
+                <p>Agregar a una orden</p>
+            </options>
+
+            <separator></separator>
+
+            <options>
+                <i class="fi fi-rr-info applyuicolor-fill"></i>
+                <p>Información del Producto</p>
+            </options>
+
+        </menu>
+
+        <menu class="InputsMenu" style="display: none;">
+
+            <options>
+                <i class="fi fi-rr-square-dashed applyuicolor-fill"></i>
+                <p>Seleccionar todo</p>
+            </options>
+
+            <separator></separator>
+
+            <options>
+                <i class="fi fi-rr-copy applyuicolor-fill"></i>
+                <p>Copiar</p>
+            </options>
+
+            <options>
+                <i class="fi fi-rr-clipboard applyuicolor-fill"></i>
+                <p>Pegar</p>
+            </options>
+
+            <options>
+                <i class="fi fi-rr-scissors applyuicolor-fill"></i>
+                <p>Cortar</p>
+            </options>
+
+            <separator></separator>
+
+            <options>
+                <i class="fi fi-rr-trash applyuicolor-fill"></i>
+                <p>Eliminar Texto</p>
+            </options>
+
+        </menu>
+
+        <menu class="UsersMenu" style="display: none;">
+
+            <options>
+                <i class="fi fi-rr-pencil applyuicolor-fill"></i>
+                <p>Editar Usuario</p>
+            </options>
+
+            <separator></separator>
+
+            <options>
+                <i class="fi fi-rr-toggle-on applyuicolor-fill"></i>
+                <p>Activar/Desactivar cuenta</p>
+            </options>
+
+            <separator></separator>
+
+            <options>
+                <i class="fi fi-rr-fingerprint applyuicolor-fill"></i>
+                <p>Restablecer contraseña</p>
+            </options>
+
+        </menu>
+
+        <menu class="FilesMenu" style="display: none;">
+
+            <options>
+                <i class="fi fi-rr-arrow-up-right-from-square applyuicolor-fill"></i>
+                <p>Abrir archivo</p>
+            </options>
+
+            <options>
+                <i class="i fi-rr-signal-stream applyuicolor-fill"></i>
+                <p>Compartir</p>
+            </options>
+
+            <separator></separator>
+
+            <options>
+                <i class="fi fi-rr-pencil applyuicolor-fill"></i>
+                <p>Renombrar</p>
+            </options>
+
+            <options>
+                <i class="fi fi-rs-signature applyuicolor-fill"></i>
+                <p>Firmar digitalmente</p>
+            </options>
+
+            <options>
+                <i class="fi fi-rs-crossed-eye applyuicolor-fill"></i>
+                <p>Ocultar archivo</p>
+            </options>
+
+            <options>
+                <i class="fi fi-rr-lock applyuicolor-fill"></i>
+                <p>Encriptar archivo</p>
+            </options>
+
+            <separator></separator>
+
+            <options>
+                <i class="fi fi-rr-code-branch applyuicolor-fill"></i>
+                <p>Copiar ruta del archivo</p>
+            </options>
+
+            <options>
+                <i class="fi fi-rr-scissors applyuicolor-fill"></i>
+                <p>Cortar</p>
+            </options>
+
+            <options>
+                <i class="fi fi-rr-clone applyuicolor-fill"></i>
+                <p>Copiar</p>
+            </options>
+
+            <options>
+                <i class="fi fi-rr-usb-pendrive applyuicolor-fill"></i>
+                <p>Mover a unidad removible</p>
+            </options>
+
+            <options>
+                <i class="fi fi-rr-trash-empty applyuicolor-fill"></i>
+                <p>Eliminar</p>
+            </options>
+
+            <separator></separator>
+
+            <options>
+                <i class="fi fi-rr-file-circle-info applyuicolor-fill"></i>
+                <p>Propiedades</p>
+            </options>
+
+        </menu>
+
+        <menu class="FoldersMenu" style="display: none;">
+
+            <options>
+                <i class="fi fi-rr-arrow-up-right-from-square applyuicolor-fill"></i>
+                <p>Abrir Carpeta</p>
+            </options>
+
+            <options>
+                <i class="fi fi-rr-file-zipper applyuicolor-fill"></i>
+                <p>Comprimir</p>
+            </options>
+
+            <separator></separator>
+
+            <options>
+                <i class="fi fi-rr-pencil applyuicolor-fill"></i>
+                <p>Renombrar</p>
+            </options>
+
+            <options>
+                <i class="fi fi-rs-crossed-eye applyuicolor-fill"></i>
+                <p>Ocultar Carpeta</p>
+            </options>
+
+            <options>
+                <i class="fi fi-rr-lock applyuicolor-fill"></i>
+                <p>Encriptar Carpeta</p>
+            </options>
+
+            <separator></separator>
+
+            <options>
+                <i class="fi fi-rr-code-branch applyuicolor-fill"></i>
+                <p>Copiar ruta de la carpeta</p>
+            </options>
+
+            <options>
+                <i class="fi fi-rr-scissors applyuicolor-fill"></i>
+                <p>Cortar</p>
+            </options>
+
+            <options>
+                <i class="fi fi-rr-clone applyuicolor-fill"></i>
+                <p>Copiar</p>
+            </options>
+
+            <options>
+                <i class="fi fi-rr-trash-empty applyuicolor-fill"></i>
+                <p>Eliminar</p>
+            </options>
+
+            <separator></separator>
+
+            <options>
+                <i class="fi fi-rr-file-circle-info applyuicolor-fill"></i>
+                <p>Propiedades</p>
+            </options>
+
+        </menu>
+
+        <menu class="DirMenu" style="display: none;">
+    
+            <options>
+                <i class="fi fi-rr-search applyuicolor-fill"></i>
+                <p>Buscar en el directorio</p>
+                <ref>Ctrl+F</ref>
+            </options>
+
+            <options>
+                <i class="fi fi-rr-rotate-right applyuicolor-fill"></i>
+                <p>Recargar directorio</p>
+            </options>
+
+            <options>
+                <i class="i fi-rr-signal-stream applyuicolor-fill"></i>
+                <p>Compartir directorio</p>
+            </options>
+
+            <options>
+                <i class="fi fi-rr-plus applyuicolor-fill"></i>
+                <p>Crear</p>
+            </options>
+
+            <separator></separator>
+
+            <options>
+                <i class="fi fi-rr-file-zipper applyuicolor-fill"></i>
+                <p>Nuevo archivo Comprimido</p>
+            </options>
+
+            <options>
+                <i class="fi fi-rr-terminal applyuicolor-fill"></i>
+                <p>Ejecutar Terminal</p>
+            </options>
+
+            <options>
+                <i class="fi fi-rr-lock applyuicolor-fill"></i>
+                <p>Encriptar Directorio</p>
+            </options>
+
+            <separator></separator>
+
+            <options>
+                <i class="fi fi-rr-code-branch applyuicolor-fill"></i>
+                <p>Copiar ruta del Directorio</p>
+            </options>
+
+            <separator></separator>
+
+            <options>
+                <i class="fi fi-rr-box-open applyuicolor-fill"></i>
+                <p>Más Opciones</p>
+            </options>
+
+
+        </menu>
+
+        <menu class="LinksMenu" style="display: none;">
+
+            <options>
+                <i class="fi fi-rr-link-alt applyuicolor-fill"></i>
+                <p>Abrir en una pestaña nueva</p>
+            </options>
+
+            <separator></separator>
+
+            <options>
+                <i class="fi fi-rr-copy applyuicolor-fill"></i>
+                <p>Copiar enlace</p>
+            </options>
+
+        </menu>
+
+    </div>
+
+    <movebar>
+
+        <controls>
+
+            <div class="c" onclick="window.apxcontrols.apxcls()">
+
+               <i class="fi fi-rr-cross-small"></i>
+
+            </div>
+            <div class="mx">
+
+                <i class="fi fi-rr-arrow-small-up Maximize" style="font-size:15px;"></i>
+                <i class="fi fi-rr-clone Restore" style="font-size: 9px; display: none; position:absolute;"></i>
+
+            </div>
+            <div class="mn">
+
+               <i class="fi fi-rs-angle-down" style="color: black;"></i>
+
+            </div>
+
+        </controls>
+
+    </movebar>
+
+    <aside class="sidebar" style="display: none;">
+
+        <header>
+
+            <logo></logo>
+            <t>LineX PlayGround</t>
+
+        </header>
+
+        <block class="mainfolders">
+
+            <child class="current"> <corner></corner> <i class="fi fi-rr-house-blank"></i> <t>Página de Inicio</t> </child>
+            <child> <corner></corner> <i class="fi fi-rr-screen"></i> <t>Escritorio</t> </child>
+            <child> <corner></corner> <i class="fi fi-rr-progress-download"></i> <t>Descargas</t> </child>
+            <child> <corner></corner> <i class="fi fi-rr-document-signed"></i> <t>Documentos</t> </child>
+            <child> <corner></corner> <i class="fi fi-rr-tv-retro"></i> <t>Entretenimiento</t> </child>
+
+
+        </block>
+
+        <block class="disks">
+
+            <t1>Unidades <i class="fi fi-rs-angle-small-down"></i> </t1>
+            <child class="LocalDisk"> <corner></corner> <i class="fi fi-rs-box"></i> <t>Disco local (C:)</t> </child>
+            <child><corner></corner> <i class="fi fi-sr-sitemap"></i> <t>Dispositivos de red</t> </child>
+
+            <div class="ExternalDisks"></div>
+
+        </block>
+
+        <block class="appsettings">
+
+            <child style="display: none;"> <i class="HelloIDLogo"></i> <t>Iniciar sesión en Hello ID</t> </child>  
+            <child class="ProfileCard"> <pp></pp> <t>Alejandro Salinas</t> </child>
+            <child> <i class="fi fi-rr-settings"></i> <t>Configuración</t> </child>
+            <child class="AboutDex"> <i class="fi fi-sr-bolt"></i> <t>Acerca de LineX</t> </child>
+
+        </block>
+
+         <resizer class="resizer" id="resizer"></resizer>
+
+    </aside>
+
+    <main class="content" style="width: 100% !important;">
+
+      <header>
+
+          <logo></logo>
+          <t>LineX PlayGround</t>
+
+      </header>
+
+        <page class="recents Page" style="display: none;">
+
+            <section>
+
+                <element>
+
+                    <div class="logged">
+
+                        <pp></pp>
+                        <t style="text-shadow: none !important;">Alejandro Salinas</t>
+                        <un>@salinxlg</un>
+
+                    </div>
+
+                </element>
+
+                <element>
+
+                    <id></id>
+                    <t>Disco Local</t>
+                    <un>1 TB</un>
+
+                </element>
+
+                <element>
+
+                    <id></id>
+                    <t>LineX PlayGround</t>
+                    <un>7.1.0</un>
+        
+                </element>
+
+                <element>
+
+                    <div class="logged">
+
+                        <pp></pp>
+                        <t style="text-shadow: none !important;">Alejandro Salinas</t>
+                        <un>Desarrollador</un>
+    
+
+                    </div>
+
+                </element>
+
+            </section>
+
+            <section>
+
+                <element>
+
+                    <i class="fi fi-rr-link"></i>
+                    <t>Conectarse con otros</t>
+
+                </element>
+
+                <element>
+
+                    <i class="fi fi-sr-signal-stream"></i>
+                    <t>Montar servidor</t>
+
+                </element>
+
+                <element>
+
+                    <i class="fi fi-rr-devices"></i>
+                    <t>Lista de dispositivos</t>
+
+                </element>
+
+                <element>
+
+                    <i class="fi fi-rr-sitemap"></i>
+                    <t>Dispositivos de Red</t>
+
+                </element>
+
+                <element class="CloudOption">
+
+                    <i class="fi fi-rr-cloud"></i>
+                    <t>Administrar DexSync</t>
+
+                </element>
+
+                <element>
+
+                    <i class="fi fi-rr-box-open"></i>
+                    <t>Administrador de paquetes</t>
+
+                </element>
+
+                <element>
+
+                    <i class="fi fi-rr-chart-pie-alt"></i>
+                    <t>Espacio disponible</t>
+
+                </element>
+
+                <element>
+
+                    <i class="fi fi-rr-file-zipper"></i>
+                    <t>Comprimir archivo</t>
+
+                </element>
+
+            </section>
+
+            <section>
+
+                <element>
+
+                    <i class="fi fi-rr-clock-three"></i>
+                    <t>Recientes</t>
+
+                </element>
+
+                <element>
+
+                    <i class="fi fi-rr-screen"></i>
+                    <t>Escritorio</t>
+
+                </element>
+
+                <element>
+
+                    <i class="fi fi-rr-progress-download"></i>
+                    <t>Descargas</t>
+
+                </element>
+
+                <element>
+
+                    <i class="fi fi-rr-tv-retro"></i>
+                    <t>Entretenimiento</t>
+
+                </element>
+
+                <element>
+
+                    <i class="fi fi-rr-box"></i>
+                    <t>Utilidades</t>
+
+                </element>
+
+                <element>
+
+                    <i class="fi fi-sr-time-past"></i>
+                    <t>Backups</t>
+
+                </element>
+
+                <element>
+
+                    <i class="fi fi-ts-trash-empty"></i>
+                    <t>Papelera</t>
+
+                </element>
+
+            </section>
+
+        </page>
+
+        <page class="Page welcome active">
+
+            <picon> <icon></icon> </picon>
+            <t>LineX PlayGround</t>
+            <p>7.1.0</p>
+            <cp> © 2025 Dexly Studios LLC, Todos los derechos reservados.</cp>
+
+        </page>
+        
+        <page id="terminal" class="Terminal Page "></page>
+        <div id="input-bar" class="input-bar inputcont">
+          <!--<i class="fi fi-sr-shield applyuicolor-stroke" style="display: none;"></i>-->
+          <i class="fi fi-sc-dollar applyuicolor-stroke TypeIcon"></i>
+          <input id="input" type="text" autofocus spellcheck="false">
+        </div>
+
+        <page class="about Page" style="opacity: 0;">
+
+            <section>
+
+                <picon> <icon></icon> </picon>
+                <t>No preguntes cuántas horas me tomó, pero lo hice</t>
+                <p>Hubo errores, reinicios forzados y gritos al monitor, hasta borre el sistema por accidente. Pero al final al final funcionó, o eso creo  <emj>🙏🏼</emj></p>
+                <sign><st>Alejandro Salinas</st></sign>
+
+            </section>
+
+            <section></section>
+            <section></section>
+
+        </page>
+
+    </main>
+
+    
+</body>
+
+<script src="/assx/com.js/prep.dexkit.js"></script>
+
+<script>
+
+    console.log(window.apxcontrols)
+
+</script>
+
+</html>
