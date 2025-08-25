@@ -1,0 +1,41 @@
+{
+  "name": "linex",
+  "version": "7.1.0",
+  "main": "srx/com.boot.js",
+  "author": "Alejandro Salinas",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "build": {
+
+    "appId": "com.dexly.linex",
+    "productName": "Dexly LineX PlayGround",
+    "files": [
+
+      "srx/**/*",
+      "error/**/*",
+      "assx/**/*",
+      "public/**/*",
+      "package.json"
+
+    ],
+    "win": {
+
+      "target": "nsis",
+      "icon": "assx/img/logo.png"
+
+    }
+
+  },
+  "devDependencies": {
+    "electron": "^37.1.0",
+    "electron-builder": "^26.0.12"
+
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "is-elevated": "^4.0.0",
+    "mica-electron": "^1.5.16"
+  }
+}
