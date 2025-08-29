@@ -228,6 +228,6 @@ esto creará una carpeta llamada dist en la raiz del proyecto, dentro estará el
 <br><br>
 <div align=center>
 
-<img src="assx/img/Sign.png" width="20%">
+<img src="assx/img/Sign.png" width="205px">
 
 </div>
