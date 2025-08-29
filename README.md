@@ -218,10 +218,16 @@ esto creará una carpeta llamada dist en la raiz del proyecto, dentro estará el
 <br>
 
 
-## Awesome applications using Mica-Electron
+## Información final del proyecto:
 
-- [MicaDiscord](https://www.micadiscord.com/) by GregVido and Arbitro
-- [Cider](https://github.com/ciderapp/Cider) by [Cider Collective](https://github.com/ciderapp)
-- [Fluent Browser](https://github.com/ThePiGuy3141/fluent-browser) by <a href="https://github.com/ThePiGuy3141">ThePiGuy3141</a>
-- [Mica-Snap](https://github.com/GregVido/Mica-Snap) by GregVido
-- [SysMocap](https://github.com/xianfei/SysMocap) by [xianfei](https://github.com/xianfei)
+- [Alejandro Salinas](https://instagram.com/salinxlg) es el creador de este proyecto
+- La versión actual de LineX es `v7.1.0`
+- Puedes instalar el proyecto clonando el repositorio o con `npm install dexline`
+- © 2025 Alejandro Salinas, Dexly Studios, Todos los derechos Reservados.
+
+<br><br>
+<div align=center>
+
+<img src="assx/img/Sign.png" width="20%">
+
+</div>
